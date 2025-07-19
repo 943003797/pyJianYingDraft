@@ -21,7 +21,6 @@ setup(
     python_requires='>=3.8',
     install_requires=[
         "pymediainfo",
-        "imageio",
-        "uiautomation>=2"
+        "imageio"
     ],
 )
