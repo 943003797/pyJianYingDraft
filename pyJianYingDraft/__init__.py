@@ -21,7 +21,6 @@ from .track import TrackType
 from .template_mode import ShrinkMode, ExtendMode
 from .script_file import ScriptFile
 from .draft_folder import DraftFolder
-from .jianying_controller import JianyingController, ExportResolution, ExportFramerate
 
 from .time_util import SEC, tim, trange
 
@@ -67,24 +66,6 @@ class Draft_folder:
     def __new__(cls, *args, **kwargs):
         _deprecated_class_warning("Draft_folder", "DraftFolder")
         return DraftFolder(*args, **kwargs)
-
-class Jianying_controller:
-    """Deprecated: Use JianyingController instead."""
-    def __new__(cls, *args, **kwargs):
-        _deprecated_class_warning("Jianying_controller", "JianyingController")
-        return JianyingController(*args, **kwargs)
-
-class Export_resolution:
-    """Deprecated: Use ExportResolution instead."""
-    def __new__(cls, *args, **kwargs):
-        _deprecated_class_warning("Export_resolution", "ExportResolution")
-        return ExportResolution(*args, **kwargs)
-
-class Export_framerate:
-    """Deprecated: Use ExportFramerate instead."""
-    def __new__(cls, *args, **kwargs):
-        _deprecated_class_warning("Export_framerate", "ExportFramerate")
-        return ExportFramerate(*args, **kwargs)
 
 class Shrink_mode:
     """Deprecated: Use ShrinkMode instead."""
@@ -227,9 +208,6 @@ __all__ = [
     "ExtendMode",
     "ScriptFile",
     "DraftFolder",
-    "JianyingController",
-    "ExportResolution",
-    "ExportFramerate",
     "SEC",
     "tim",
     "trange",
@@ -237,7 +215,6 @@ __all__ = [
     # 向后兼容的snake_case类
     "Script_file",
     "Draft_folder",
-    "Jianying_controller",
     "Export_resolution",
     "Export_framerate",
     "Shrink_mode",
